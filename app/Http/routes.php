@@ -30,3 +30,7 @@ Route::get('/edit/{news}','NewsController@edit');
 Route::patch('/news/{news}','NewsController@update');
 
 Route::get('/delete/{news}','NewsController@delete');
+
+Route::post('/comments/{news}','CommentController@store');
+
+Route::get('/news/{news}/comments/{comment}/delete','CommentController@delete');
